@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>events</title>
+</head>
+
+<body
+    style="font-family: Arial, Helvetica, sans-serif; font-weight: bolder; display: grid; place-content: center; padding: 15%; ">
+
+    <!-- manejo de DOM -->
+    <h1>JS events</h1>
+
+    <button type="button" id="btn">click here</button>
+
+    <p>
+        <label for="">type something</label>
+        <input type="text" name="" id="type" value="" />
+    </p>
+
+    <form action="">
+        <label for="colors">favorite color:</label>
+        <select name="color" id="colors">
+            <option value="">select</option>
+            <option value="1">blue</option>
+            <option value="2">red</option>
+            <option value="3">yellow</option>
+        </select>
+    </form>
+
+    <script>
+        const $btn = document.querySelector("#btn");
+        $btn.addEventListener("click", () => {
+            console.log("Do not touch mi again b#*h!");
+        });
+
+        const $type = document.querySelector("#type");
+        $type.addEventListener("keyup", (e) => {
+            console.log("Do not type anything again b#*h!");
+            console.log(e);
+            console.log(e.target.value);
+        });
+
+        const $body = document.querySelector('body');
+        const $scolor = document.querySelector('#colors');
+        $scolor.addEventListener('change', (e) => {
+            if(e.target.value === "1"){
+                $body.className = "";
+                $body.classList.add = ("1");
+            } else if(e.target.value === "2"){
+                $body.className = "";
+                $body.classList.add = ("2");
+            } else if(e.target.value === "3"){
+                $body.className = "";
+                $body.classList.add = ("3");
+            }
+        })
+    </script>
+</body>
+
+</html>

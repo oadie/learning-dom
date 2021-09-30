@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>exersice</title>
+    </head>
+    <body  style="font-family: Arial, Helvetica, sans-serif; font-weight: bolder; display: grid; place-content: center; padding: 15%;">
+       
+        <button>+1</button>
+    
+        <ul>
+        </ul>
+       
+    <script>
+        //vinculo con html, usar id (#) o nombre de etiqueta
+        const $btn = document.querySelector("button");
+        const $list = document.querySelector("ul");
+        
+        var one = 1;
+
+        $btn.addEventListener("click", () => {
+            const add = document.createElement("li"); //agrega li
+            add.textContent = one; //mete contenido a li
+            one ++;
+            $list.appendChild(add); //mete a li a la lista
+        });
+    </script>
+    </body>
+</html>

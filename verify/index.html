@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>verify age</title>
+</head>
+
+<body
+    style="font-family: Arial, Helvetica, sans-serif; font-weight: bolder; display: grid; place-content: center; padding: 15%;">
+
+    <!-- manejo de DOM -->
+    <h1>r u legal?</h1>
+
+    <form action="">
+        <label for="input">type your age: </label>
+        <input id="input" type="number" name="name" value=""/>
+
+        <button type="button" onclick="sayit()">upload</button>
+    </form>
+
+    <h2 id="respond">*</h2>
+
+    <script>
+        const nameText = document.querySelector('#respond');
+        const age = document.querySelector('#input');
+        console.log (age);
+        const sayit = () => {
+            const it = parseInt(age.value) >= 18 ? 'u r legal':'u r not legal';
+            nameText.textContent = it;
+        }
+    </script>
+</body>
+
+</html>
